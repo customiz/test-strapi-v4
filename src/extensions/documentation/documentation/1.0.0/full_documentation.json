@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-01-09T15:50:56.807Z"
+    "x-generation-date": "2023-01-09T20:42:16.915Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -5654,6 +5654,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -6216,6 +6219,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "phone": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -6813,6 +6819,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -7376,6 +7385,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -7710,6 +7722,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "phone": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -8302,6 +8317,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "phone": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -8928,6 +8946,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "phone": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -9520,6 +9541,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "phone": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -10043,6 +10067,9 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "phone": {
+                "type": "string"
               }
             }
           }
@@ -10487,6 +10514,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -10583,6 +10613,9 @@
                     }
                   }
                 }
+              },
+              "phone": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -11069,6 +11102,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -11165,6 +11201,9 @@
                     }
                   }
                 }
+              },
+              "phone": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -11684,6 +11723,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -11780,6 +11822,9 @@
                     }
                   }
                 }
+              },
+              "phone": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -12266,6 +12311,9 @@
                                             }
                                           }
                                         },
+                                        "phone": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -12362,6 +12410,9 @@
                     }
                   }
                 }
+              },
+              "phone": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -13235,6 +13286,87 @@
                 "schema": {
                   "$ref": "#/components/schemas/Error"
                 }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/users/login": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/UsersPermissionsUserResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "Forbidden",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not Found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "tags": [
+          "Users-permissions - User"
+        ],
+        "parameters": [],
+        "operationId": "post/users/login",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UsersPermissionsUserRequest"
               }
             }
           }
